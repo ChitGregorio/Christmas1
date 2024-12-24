@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merry Christmas with Surprises!</title>
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+      text-align: center;
+      background: linear-gradient(to right, #2340ff, #ff6b6b);
+      color: white;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin: 20px;
+    }
+
+    .surprise-container {
+      margin-top: 20px;
+    }
+
+    /* Default button style */
+    .button {
+      transition-duration: 0.4s;
+      padding: 20px 40px;
+      font-size: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
+      border: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Green, Red, and Blue background buttons */
+    .green-btn {
+      background-color: green;
+    }
+
+    .red-btn {
+      background-color: red;
+    }
+
+    .blue-btn {
+      background-color: blue;
+    }
+
+    /* Hover effect for buttons */
+    .button:hover {
+      background-color: #04AA6D; /* Green for all buttons on hover */
+      color: white;
+    }
+
+    /* Container for the displayed meme image */
+    #motivationContainer {
+      margin-top: 20px;
+    }
+
+    #motivationImage {
+      max-width: 100%;
+      max-height: 300px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: none;
+    }
+
+    /* Floating message styling */
+    #floatingMessage {
+      position: absolute;
+      font-size: 20px;
+      color: yellow;
+      font-weight: bold;
+      animation: float 5s infinite alternate;
+    }
+
+    /* Keyframes for floating animation */
+    @keyframes float {
+      0% {
+        left: 0;
+        top: 10%;
+      }
+      25% {
+        left: 30%;
+        top: 50%;
+      }
+      50% {
+        left: 60%;
+        top: 30%;
+      }
+      75% {
+        left: 90%;
+        top: 70%;
+      }
+      100% {
+        left: 50%;
+        top: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Merry Christmas! 🎄🎉</h1>
+  <p>Chit Gregorio namamasko po!!</p>
+
+  <div class="surprise-container">
+    <button class="button green-btn" id="surprise1">Pamaskohan 1</button>
+    <button class="button red-btn" id="surprise2">Pamaskohan 2</button>
+    <button class="button blue-btn" id="surprise3">Pamaskohan 3</button>
+  </div>
+
+  <div id="motivationContainer"></div>
+  <img id="motivationImage" src="" alt="Christmas Meme">
+
+  <!-- Floating message -->
+  <div id="floatingMessage">GCash Number: 0967-3#8-7#9# | PM me!</div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const surprise1Button = document.getElementById('surprise1');
+      const surprise2Button = document.getElementById('surprise2');
+      const surprise3Button = document.getElementById('surprise3');
+      const motivationImage = document.getElementById('motivationImage');
+      const motivationContainer = document.getElementById('motivationContainer');
+
+      // Handle Surprise 1 button click
+      surprise1Button.addEventListener('click', () => {
+        motivationImage.src = 'christmas1.jpg';  // Update with the correct path to your image
+        motivationImage.style.display = 'block';
+        motivationContainer.innerHTML = "Hatagi ko Pamaskohann!";
+      });
+
+      // Handle Surprise 2 button click
+      surprise2Button.addEventListener('click', () => {
+        motivationImage.src = 'christmas2.jpg';  // Update with the correct path to your image
+        motivationImage.style.display = 'block';
+        motivationContainer.innerHTML = "Hatagi ko pamaskohan huhuhu!";
+      });
+
+      // Handle Surprise 3 button click
+      surprise3Button.addEventListener('click', () => {
+        motivationImage.src = 'christmas3.jpg';  // Update with the correct path to your image
+        motivationImage.style.display = 'block';
+        motivationContainer.innerHTML = "Chatti naku crush!!";
+      });
+    });
+  </script>
+</body>
+</html>
